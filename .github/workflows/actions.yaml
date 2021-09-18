@@ -1,0 +1,11 @@
+---
+name: Vagrant validate
+on: [push]
+
+jobs:
+  validate:
+    name: Vagrant validate
+    container: nineseconds/docker-vagrant:latest
+    steps:
+      - runs: vagrant validate
+...
