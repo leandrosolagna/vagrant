@@ -5,12 +5,12 @@ on: [push]
 jobs:
   validate:
     name: Vagrant validate
-    runs-on: ubuntu-20.04
-    container: nineseconds/docker-vagrant:latest
+    runs-on: macos-10.15
+      #    container: nineseconds/docker-vagrant:latest
     steps:
       - uses: actions/checkout@v2
       - run: ls -l
-      - run: dpkg -l | grep -i vagrant
+      - run: vagrant validate
         #      - uses: nineseconds/docker-vagrant:latest
         #        run: vagrant validate
 
