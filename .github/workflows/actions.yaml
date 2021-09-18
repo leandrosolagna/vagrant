@@ -5,6 +5,7 @@ on: [push]
 jobs:
   validate:
     name: Vagrant validate
+    runs-on: ubuntu-20.04
     container: nineseconds/docker-vagrant:latest
     steps:
       - run: vagrant validate
