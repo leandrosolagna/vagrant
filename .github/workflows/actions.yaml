@@ -9,5 +9,9 @@ jobs:
     container: nineseconds/docker-vagrant:latest
     steps:
       - uses: actions/checkout@v2
-      - run: vagrant validate
+      - run: ls -l
+      - run: dpkg -l | grep -i vagrant
+        #      - uses: nineseconds/docker-vagrant:latest
+        #        run: vagrant validate
+
 ...
