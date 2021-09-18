@@ -7,5 +7,5 @@ jobs:
     name: Vagrant validate
     container: nineseconds/docker-vagrant:latest
     steps:
-      - runs: vagrant validate
+      - run: vagrant validate
 ...
