@@ -1,0 +1,1 @@
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOO8xtRmeWXGbICmF5S/xbh5gFgf3l1IJktWwK3mxym6 leandro@manjarovb
