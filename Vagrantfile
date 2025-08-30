@@ -4,15 +4,16 @@
 DOMAIN = "local"
 BOX = "leandrosolagna/centos"
 BOX_VERSION = "0.0.1"
-SSH_PUB_KEY = File.readlines("ansible.txt").first.strip
+SSH_PUB_KEY = File.readlines("authorized_keys").first.strip
 
 nodes = [
   {:hostname => "clustercontrol", :ip => "192.168.56.9", :cpu => "2", :memory => "2048"},
   {:hostname => "masternode", :ip => "192.168.56.10", :cpu => "1", :memory => "1024"},
   {:hostname => "workernode", :ip => "192.168.56.20", :cpu => "1", :memory => "1024"}
+  {:hostname => "workernode", :ip => "192.168.56.30", :cpu => "1", :memory => "1024"}
 ]
 
-Vagrant.configure("2") do |config|
+Vagrant.configure("3") do |config|
 
   nodes.each do |node|
     config.vm.define node[:hostname] do |nodeconfig|
